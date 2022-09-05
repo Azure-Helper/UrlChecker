@@ -39,8 +39,8 @@ jobs:
             build
             assembleAlpha
 
-      - name: Zip apk # just remove the password here if you want to build the apk yourself
-        run: zip -j -P ${{ secrets.ALPHA_PASS }} app-alpha.zip app/build/outputs/apk/alpha/app-alpha.apk
+      - name: Zip apk
+        run: zip -j app-alpha.zip app/build/outputs/apk/alpha/app-alpha.apk
 
       - name: Update alpha tag to latest commit
         uses: EndBug/latest-tag@latest
